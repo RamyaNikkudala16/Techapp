@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<techapp>
+    <metadata>
+        <name>TechApp</name>
+        <version>1.0.0</version>
+        <author>Your Name</author>
+        <description>A modern technology application for productivity and innovation.</description>
+        <created>2026-04-20</created>
+    </metadata>
+
+    <configuration>
+        <theme>light</theme>
+        <language>en</language>
+        <notifications enabled="true"/>
+        <autoUpdate enabled="true" interval="daily"/>
+    </configuration>
+
+    <modules>
+        <module id="dashboard" enabled="true">
+            <name>Dashboard</name>
+            <description>Main overview of app activity</description>
+        </module>
+
+        <module id="analytics" enabled="true">
+            <name>Analytics</name>
+            <description>Data insights and reports</description>
+        </module>
+
+        <module id="settings" enabled="true">
+            <name>Settings</name>
+            <description>User preferences and configurations</description>
+        </module>
+    </modules>
+
+    <users>
+        <user id="1" role="admin">
+            <username>admin</username>
+            <email>admin@techapp.com</email>
+        </user>
+
+        <user id="2" role="user">
+            <username>guest</username>
+            <email>guest@techapp.com</email>
+        </user>
+    </users>
+
+    <api>
+        <endpoint>/api/v1</endpoint>
+        <authentication type="token"/>
+        <rateLimit requestsPerMinute="60"/>
+    </api>
+
+    <logs>
+        <logLevel>INFO</logLevel>
+        <logFile>/logs/techapp.log</logFile>
+    </logs>
+</techapp>
